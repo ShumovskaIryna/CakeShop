@@ -6,6 +6,21 @@ import './header.css';
 import userIcon from "../../assets/images/1.jpeg"
 import logo from "../../assets/images/logo.png"
 
+const nav__link = [
+  {
+    path: "home",
+    display: "Home"
+  },
+  {
+    path: "shop",
+    display: "Shop"
+  },
+  {
+    path: "cart",
+    display: "Cart"
+  }
+]
+
 const Header = () => {
   return (
     <header className='header'>
@@ -20,15 +35,11 @@ const Header = () => {
             </div>
             <div className='navigation'>
               <ul className='menu'>
-                <li className='nav_item'>
-                  <NavLink to="home">Home</NavLink>
-                </li>
-                <li className='nav_item'>
-                  <NavLink to="shop">Shop</NavLink>
-                </li>
-                <li className='nav_item'>
-                  <NavLink to="cart">Cart</NavLink>
-                </li>
+                {nav__link.map(item=>(
+                  <li className='nav_item'>
+                  <NavLink to={item.path}>{item.display}</NavLink>
+                  </li>
+                ))}
               </ul>
             </div>
             <div className='nav_icons'>
