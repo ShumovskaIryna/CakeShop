@@ -1,10 +1,11 @@
 import './App.css';
+import MainScreen from './components/MainScreen';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>Hello cake shop</p>
+        <MainScreen />
       </header>
     </div>
   );
