@@ -55,11 +55,10 @@
 }
 
 .mobile_menu span i{
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     cursor: pointer;
     display: none;
 }
-
 
 .menu{
     display: flex;
@@ -68,4 +67,31 @@
     column-gap: 2.7rem;
     color: var(--primary-color);
     margin-bottom: 0px;
+}
+
+.nav_active{
+    font-weight: 700 !important;
+}
+
+.cart_icon, 
+.fav_icon{
+    position: relative;
+}
+
+.badge{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    right: -5%;
+    width: 15px;
+    height: 15px;
+    content: "";
+    background: var(--primary-color);
+    color: #fff;
+    border-radius: 50px;
+    font-size: .7rem;
+    font-weight: 600;
+    z-index: 10;
 }

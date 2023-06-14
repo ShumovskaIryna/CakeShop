@@ -5,6 +5,7 @@ import { Container, Row } from "reactstrap"
 import './header.css';
 import userIcon from "../../assets/images/1.jpeg"
 import logo from "../../assets/images/logo.png"
+import { motion } from "framer-motion"
 
 const nav__link = [
   {
@@ -35,9 +36,9 @@ const Header = () => {
             </div>
             <div className='navigation'>
               <ul className='menu'>
-                {nav__link.map(item=>(
-                  <li className='nav_item'>
-                  <NavLink to={item.path}>{item.display}</NavLink>
+                {nav__link.map((item, index)=>(
+                  <li className='nav_item' key={index}>
+                  <NavLink to={item.path} className={(navClass)=>navClass.isActive ? 'nav_active' : ''}>{item.display}</NavLink>
                   </li>
                 ))}
               </ul>
@@ -45,12 +46,14 @@ const Header = () => {
             <div className='nav_icons'>
               <span className='fav_icon'>
                 <i class="ri-heart-line"></i>
+                <span className='badge'>1</span>
               </span>
               <span className='cart_icon'>
                 <i class="ri-shopping-bag-line"></i>
+                <span className='badge'>1</span>
               </span>
               <span className='user_icon'>
-                <img src={userIcon} alt="" className='user' />
+                <motion.img whileTap={{ scale: 1.1}} src={userIcon} alt="" className='user' />
               </span>
             </div>
             <div className='mobile_menu'>
