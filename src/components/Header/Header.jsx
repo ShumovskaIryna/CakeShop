@@ -31,7 +31,7 @@ const Header = () => {
             <div className='logo'>
               <img src={logo} alt="" />
               <div>
-                <h1>Internet Shop</h1>
+                <h1>Panda Shop</h1>
               </div>
             </div>
             <div className='navigation'>
